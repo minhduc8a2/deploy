@@ -1,8 +1,8 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-const path = require("path");
-require("dotenv").config();
+
+
 const PORT = process.env.PORT || 5000;
 
 //set up mongoose
@@ -35,7 +35,7 @@ const getAllTasks = async (req, res) => {
     res.status(500).json({ message: "something went wrong" });
   }
 };
-// app.use(cors());
+
 
 app.get("/api/tasks", getAllTasks);
 app.get("/", (req, res) => {
