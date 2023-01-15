@@ -38,7 +38,6 @@ const getAllTasks = async (req, res) => {
 // app.use(cors());
 
 app.get("/api/tasks", getAllTasks);
-app.use(express.static("./build"));
 
 app.listen(PORT, () => {
   console.log("server listening on port: " + PORT);
