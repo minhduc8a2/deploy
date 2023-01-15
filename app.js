@@ -38,6 +38,9 @@ const getAllTasks = async (req, res) => {
 // app.use(cors());
 
 app.get("/api/tasks", getAllTasks);
+app.get("/", (req, res) => {
+  res.json({ message: "success" });
+});
 
 app.listen(PORT, () => {
   console.log("server listening on port: " + PORT);
